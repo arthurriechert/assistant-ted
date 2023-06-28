@@ -12,7 +12,17 @@
 	<body>
 		<div class="outer">
 			<h1>Hi, my name's Ted! Ask me anything...</h1>
-			<div class="inner"></div>
+			<div class="inner">
+				<h2 class="inner-title">Chat</h2>
+				<div id="chat-history"></div>
+				<textarea
+					id="chat"
+					name="chat"
+					autocomplete="on"
+					placeholder="Type your message here..."></textarea>
+				<button id="send-chat" type="button" name="send-chat">Send</button>
+			</div>
 		</div>
+		<script src="../scripts/chat.js"/>
 	</body>
 </html>
