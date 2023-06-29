@@ -47,6 +47,7 @@ class ChatManager:
 
     def talk (self, user_message: str) -> str:
         chat = self + {"role": "user", "content": user_message}
+        print(f"Sending chat: {chat}")
         response = openai.ChatCompletion.create(
                 model=self.settings["model"],
                 temperature=self.settings["temperature"],
