@@ -11,6 +11,9 @@ window.addEventListener("load", (event) => {
 			const userMessage = document.getElementById("chat").value;
 			console.log(`Sending user message to chat core: ${userMessage}`);
 			socket.send(userMessage);
+			let userBox = addChatBox();
+			userBox.classList.add("user-box");
+			userBox.innerHTML = userMessage;
 		});
 
 		let chatBox;
@@ -20,6 +23,7 @@ window.addEventListener("load", (event) => {
 
 			if (message === "/~~")
 				chatBox = addChatBox();
+				chatBox.classList.add("chat-box");
 
 			console.log(message);
 			chatBox.innerHTML += (message === "/~~" || message === "~~/") ? "" : message;
