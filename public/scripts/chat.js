@@ -23,7 +23,7 @@ window.addEventListener("load", (event) => {
 
 			if (message === "/~~")
 				chatBox = addChatBox();
-				chatBox.classList.add("chat-box");
+				chatBox.classList.add("chat-box", "appear-transition");
 
 			console.log(message);
 			chatBox.innerHTML += (message === "/~~" || message === "~~/") ? "" : message;
@@ -38,6 +38,7 @@ window.addEventListener("load", (event) => {
 	test_socket.addEventListener("message", (event) => {
 		console.log(`Received test confirmation: ${event.data}`);
 	});
+
 });
 
 function addChatBox() {
@@ -45,5 +46,3 @@ function addChatBox() {
 	document.getElementById("chat-history").appendChild(chatBox);
 	return chatBox;
 }
-
-

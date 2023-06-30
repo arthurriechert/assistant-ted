@@ -32,7 +32,7 @@ body {
 .outer {
 	width: 100%;
 	height: 100%;
-	background-color: #3B322C;
+	background-color: #1b1b1c;
 	font-weight: bold;
 	color: #94E8B4;
 	padding: 50px;
@@ -41,7 +41,7 @@ body {
 .inner {
 	height: 80%;
 	width: 50%;
-	background-color: #4E6151;
+	background-color: #0e0e0e;
 	align-self: center;
 	justify-self: center;
 	border-radius: 60px;
@@ -50,6 +50,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 30px;
+	color: white;
 }
 
 .inner-title {
@@ -74,9 +75,14 @@ body {
 .chat-box,
 .user-box {
 	box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.1);
-	background-color: #657d69;
 	border-radius: 20px;
 	font-size: 1.5em;
+}
+
+#chat,
+#send-chat {
+	color: white;
+        background-color: #171718;
 }
 
 #chat {
@@ -95,6 +101,11 @@ body {
 	height: 8%;
 	margin-left: 10px;
 	transition: transform 1s ease;
+	font-size: 0;
+	background-image: url("assets/send.svg");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
 }
 
 #send-chat:hover {
@@ -112,8 +123,14 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 20px;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box {
+	background: linear-gradient(to bottom, #34C759, #A4E786);
 }
 
 .user-box {
 	align-self: flex-end;
+	background: linear-gradient(to bottom, #007AFF, #0EC6F1);
 }
